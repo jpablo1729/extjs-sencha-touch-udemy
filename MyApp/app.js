@@ -18,7 +18,7 @@ Ext.application({
   ],
 
   views: [
-    'Buttons'
+    'DataViewNestedList'
   ],
 
   icon: {
@@ -44,7 +44,7 @@ Ext.application({
     Ext.fly('appLoadingIndicator').destroy();
 
     // Initialize the main view
-    Ext.Viewport.add(Ext.create('MyApp.view.Buttons'));
+    Ext.Viewport.add(Ext.create('MyApp.view.DataViewNestedList'));
   },
 
   onUpdated: function() {
