@@ -17,8 +17,21 @@ Ext.application({
     'Ext.MessageBox'
   ],
 
+  models: [
+    'Place'
+
+  ],
+  stores: [
+    'Places'
+
+  ],
+
   views: [
-    'DataViewNestedList'
+    'Main', 'Home', 'PostContainer', 'Places', 'Details'
+  ],
+
+  controllers: [
+    'Details'
   ],
 
   icon: {
@@ -44,7 +57,7 @@ Ext.application({
     Ext.fly('appLoadingIndicator').destroy();
 
     // Initialize the main view
-    Ext.Viewport.add(Ext.create('MyApp.view.DataViewNestedList'));
+    Ext.Viewport.add(Ext.create('MyApp.view.Main'));
   },
 
   onUpdated: function() {
